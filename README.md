@@ -112,6 +112,9 @@ echo 192.168.1.10 > /etc/net/ifaces/ens18/ipv4address
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
+echo default via 192.168.1.1> /etc/net/ifaces/ens18/ipv4route
+
+
 systemctl restart network
 
 apt-get update
