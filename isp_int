@@ -3,7 +3,6 @@
 # Установка имени хоста
 hostnamectl set-hostname isp.au-team.irpo
 
-
 # Создание конфигурации для интерфейса ens19
 md /etc/net/ifaces/ens19
 echo -e "BOOTPROTO=static\nTYPE=eth" > /etc/net/ifaces/ens19/options
