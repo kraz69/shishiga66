@@ -221,12 +221,12 @@ systemctl restart frr
 vtysh
 
    conf t
+   
+  router ospf
 
-        router ospf
+ network 10.10.0.0/30 area 0
 
-           network 10.10.0.0/30 area 0
-
-           network 192.168.3.0/27 area 0
+ network 192.168.3.0/27 area 0
 
 do wr mem
 
