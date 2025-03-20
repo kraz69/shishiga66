@@ -108,7 +108,7 @@ hostnamectl set-hostname hq-srv.au-team.irpo; exec bash
 
 echo -e "BOOTPROTO=static \nTYPE=eth" > /etc/net/ifaces/ens18/options
 
-echo 192.168.1.10 > /etc/net/ifaces/ens18/ipv4address 
+echo 192.168.1.10/26 > /etc/net/ifaces/ens18/ipv4address 
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
