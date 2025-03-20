@@ -34,6 +34,9 @@ iptables-save > /etc/sysconfig/iptables
 # Автозапуск и перезапуск
 systemctl enable iptables
 systemctl restart iptables
+service iptables enable
 
 ##
 exec bash
+
+reboot
