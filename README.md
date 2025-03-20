@@ -152,3 +152,11 @@ wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/srv66.s
 chmod +x ./srv66.sh
 
 ./srv66.sh
+
+## ssh srv
+
+wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/sshd66srv.sh
+
+chmod +x ./sshd66srv.sh
+
+./sshd66srv.sh
