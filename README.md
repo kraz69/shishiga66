@@ -155,8 +155,8 @@ chmod +x ./srv66.sh
 
 ## ssh srv
 
-wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/sshd66srv.sh
+wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/sshdd66srv.sh
 
-chmod +x ./sshd66srv.sh
+chmod +x ./sshdd66srv.sh
 
-./sshd66srv.sh
+./sshdd66srv.sh
