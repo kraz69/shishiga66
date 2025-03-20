@@ -16,8 +16,8 @@ echo "Authorized access only" | sudo tee /root/banner > /dev/null
 echo "" | sudo tee -a /root/banner > /dev/null  # Добавление пустой строки
 
 # Установка настроек службы SSH
-systemctl enable --now ssh
-systemctl restart ssh
+systemctl enable --now sshd
+systemctl restart sshd
 
 # Вывод сообщения об успешном завершении
 echo "SSH настроен и служба перезапущена."
