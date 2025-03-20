@@ -24,6 +24,7 @@ sed -i 's/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g' /etc/net/sysctl.con
 
 #install iptables
 apt-get install iptables
+systemctl enable iptables --now
 
 # Настройка NAT с помощью iptables
 iptables -t nat -A POSTROUTING -s 172.16.4.0/28 -o ens18 -j MASQUERADE
