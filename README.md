@@ -110,6 +110,8 @@ echo -e "BOOTPROTO=static \nTYPE=eth" > /etc/net/ifaces/ens18/options
 
 echo 192.168.1.10 > /etc/net/ifaces/ens18/ipv4address 
 
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
 systemctl restart network
 
 apt-get update
