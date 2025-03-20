@@ -3,6 +3,9 @@
 # Установка имени хоста
 hostnamectl set-hostname isp.au-team.irpo
 
+# Установка времени
+timedatectl set-timezone Asia/Vladivostok
+
 # Создание директорий для интерфейсов
 mkdir -p /etc/net/ifaces/ens19
 mkdir -p /etc/net/ifaces/ens20
