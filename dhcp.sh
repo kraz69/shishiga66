@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # Установка dnsmasq
-apt install -y dnsmasq
+apt-get install -y dnsmasq
 
-# Создание резервной копии конфигурационного файла
-cp /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
 
 # Внесение настроек в конфигурационный файл
 {
@@ -17,6 +15,9 @@ cp /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
     echo "dhcp-option=6,192.168.1.10"
     echo "leasefile-ro"
 } > /etc/dnsmasq.conf
+
+#запуск службы
+systemctl enable dnsmasq --now
 
 # Перезапуск службы dnsmasq
 systemctl restart dnsmasq
