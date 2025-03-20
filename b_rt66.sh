@@ -17,4 +17,6 @@ echo -e "TYPE=iptun \nTUNTYPE=gre \nTUNLOCAL=172.16.5.5 \nTUNREMOTE=172.16.4.4 \
 
 echo -e "search au-team.irpo \nnameserver 192.168.1.10" > /etc/net/ifaces/gre1/resolv.conf
 
+systemctl restart network
+
 exec bash
