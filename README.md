@@ -1,8 +1,6 @@
 
 ## isp
 
-timedatectl set-timezone Asia/Vladivostok
-
 apt-get update
 
 apt-get install wget
