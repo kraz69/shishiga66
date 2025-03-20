@@ -31,9 +31,7 @@ sed -i 's/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g' /etc/net/sysctl.con
 
 iptables -t nat -A POSTROUTING -j MASQUERADE
 
-
 iptables-save >> /etc/sysconfig/iptables
-
 
 systemctl enable iptables
 
@@ -140,4 +138,17 @@ chmod +x ./hqsrv66DNS.sh
 
 ./hqsrv66DNS.sh
 
+## RTR acc
+wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/rtr66.sh
 
+chmod +x ./rtr66.sh
+
+./rtr66.sh
+
+## srv acc
+
+wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/srv66.sh
+
+chmod +x ./srv66.sh
+
+./srv66.sh
