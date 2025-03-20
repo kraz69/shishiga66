@@ -1,8 +1,13 @@
 ##isp
+
 apt-get update
+
 apt-get install wget
+
 wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/i66.sh
+
 chmod +x ./i66.sh
+
 ./i66.sh
 
 #hq-rtr
@@ -26,13 +31,19 @@ iptables-save >> /etc/sysconfig/iptables
 
 
 systemctl enable iptables
+
 systemctl restart iptables
+
 service iptables enable
 
 apt-get update
+
 apt-get install wget
+
 wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/hq66.sh
+
 chmod +x ./hq66.sh
+
 ./hq66.sh
 
 #br-rtr
@@ -56,16 +67,23 @@ iptables-save >> /etc/sysconfig/iptables
 
 
 systemctl enable iptables
+
 systemctl restart iptables
+
 service iptables enable
 
 apt-get update
+
 apt-get install wget 
+
 wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/b_rt66.sh
+
 chmod +x ./b_rt66.sh
+
 ./b_rt66.sh
 
-BR-SRV
+##BR-SRV
+
 hostnamectl set-hostname br-srv.au-team.irpo; exec bash
 
 echo -e "BOOTPROTO=static \nTYPE=eth" > /etc/net/ifaces/ens18/options 
@@ -78,10 +96,30 @@ echo -e "search au-team.irpo \nnameserver 192.168.1.10" > /etc/net/ifaces/ens18/
 
 systemctl restart network
 
-hq - cli 
+##hq - cli 
 
 hostnamectl set-hostname hq-cli.au-team.irpo; exec bash
+
 systemctl restart network
 
+##hq-srv
+
+hostnamectl set-hostname hq-srv.au-team.irpo; exec bash
+
+echo -e "BOOTPROTO=static \nTYPE=eth" > /etc/net/ifaces/ens18/options
+
+echo 192.168.1.10 > /etc/net/ifaces/ens18/ipv4address 
+
+systemctl restart network
+
+apt-get update
+
+apt-get install wget
+
+wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/hqsrv66DNS.sh
+
+chmod +x ./hqsrv66DNS.sh
+
+./hqsrv66DNS.sh
 
 
