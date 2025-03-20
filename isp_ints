@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Установка имени хоста
-hostnamectl set-hostname isp.au-team.irpo
+hostnamectl set-hostname isp.au-team.irpo; exec bash
 
 # Создание директорий для интерфейсов
 mkdir -p /etc/net/ifaces/ens19
