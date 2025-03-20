@@ -2,7 +2,7 @@ apt-get update
 apt-get install -y frr
 
 # Включение OSPF в конфигурации FRR
-sed -i 's/^#ospfd=ospfd/ospfd=yes/' /etc/frr/daemons
+sed -i 's/ospfd=no/ospfd=yes/'g /etc/frr/daemons
 
 # Перезапуск службы FRR
 systemctl restart frr
