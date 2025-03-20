@@ -11,16 +11,15 @@ apt-get install -y openssh-common
     echo "AllowUsers sshuser"
     echo "PermitRootLogin no"
     echo "Banner /root/banner"
-} | sudo tee -a /etc/ssh/sshd_config > /dev/null
+} | sudo tee -a /etc/openssh/sshd_config > /dev/null
 
 # Создание баннера
-echo "Authorized access only" | sudo tee /root/banner > /dev/null
-echo "" | sudo tee -a /root/banner > /dev/null  # Добавление пустой строки
+echo "Authorized access only" | tee /root/banner > /dev/null
+echo "" | tee -a /root/banner > /dev/null  
 
 # Включение и перезапуск службы SSH
-systemctl enable --now ssh
-systemctl restart ssh
+systemctl enable --now sshd
+systemctl restart sshd
 
 # Вывод сообщения об успешном завершении
 echo "SSH настроен и служба перезапущена."
-
