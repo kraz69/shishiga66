@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Установка имени хоста
-hostnamectl set-hostname isp.au-team.irpo; exec bash
+hostnamectl set-hostname isp.au-team.irpo
 
 # Создание директорий для интерфейсов
 mkdir -p /etc/net/ifaces/ens19
@@ -39,3 +39,6 @@ iptables-save > /etc/sysconfig/iptables
 
 # Включение службы iptables
 systemctl enable iptables
+
+##
+exec bash
