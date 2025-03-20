@@ -34,8 +34,5 @@ iptables -t nat -A POSTROUTING -s 172.16.5.0/28 -o ens18 -j MASQUERADE
 # Сохранение правил iptables
 iptables-save > /etc/sysconfig/iptables
 
-# Перевключение службы iptables
-systemctl restart iptables
-
 ##
 exec bash
