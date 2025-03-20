@@ -11,7 +11,7 @@ apt-get install -y openssh-common
     echo "AllowUsers sshuser"
     echo "PermitRootLogin no"
     echo "Banner /root/banner"
-} | sudo tee -a /etc/openssh/sshd_config > /dev/null
+} > /etc/openssh/sshd_config 
 
 # Создание баннера
 echo "Authorized access only" | tee /root/banner > /dev/null
