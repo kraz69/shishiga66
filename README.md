@@ -1,3 +1,5 @@
+# timedatectl set-timezone Asia/Vladivostok
+
 ##isp
 
 apt-get update
