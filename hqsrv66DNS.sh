@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Настройка файла /etc/resolv.conf
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
-echo "search au-team.irpo" >> /etc/resolv.conf
-echo "nameserver 192.168.1.10" >> /etc/resolv.conf
+echo "nameserver 127.0.0.1" > /etc/resolv.conf
+
 
 # Обновление списка пакетов
 apt-get update
