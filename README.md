@@ -1,6 +1,7 @@
-# timedatectl set-timezone Asia/Vladivostok
 
-##isp
+## isp
+
+timedatectl set-timezone Asia/Vladivostok
 
 apt-get update
 
@@ -12,7 +13,9 @@ chmod +x ./i66.sh
 
 ./i66.sh
 
-#hq-rtr
+## hq-rtr
+
+timedatectl set-timezone Asia/Vladivostok
 
 echo 172.16.4.4/28 > /etc/net/ifaces/ens18/ipv4address 
 
@@ -48,7 +51,9 @@ chmod +x ./hq66.sh
 
 ./hq66.sh
 
-#br-rtr
+## br-rtr
+
+timedatectl set-timezone Asia/Vladivostok
 
 echo "172.16.5.5/28" > /etc/net/ifaces/ens18/ipv4address
 
@@ -84,7 +89,9 @@ chmod +x ./b_rt66.sh
 
 ./b_rt66.sh
 
-##BR-SRV
+## BR-SRV
+
+timedatectl set-timezone Asia/Vladivostok
 
 hostnamectl set-hostname br-srv.au-team.irpo; exec bash
 
@@ -98,13 +105,17 @@ echo -e "search au-team.irpo \nnameserver 192.168.1.10" > /etc/net/ifaces/ens18/
 
 systemctl restart network
 
-##hq - cli 
+## hq - cli 
+
+timedatectl set-timezone Asia/Vladivostok
 
 hostnamectl set-hostname hq-cli.au-team.irpo; exec bash
 
 systemctl restart network
 
-##hq-srv
+## hq-srv
+
+timedatectl set-timezone Asia/Vladivostok
 
 hostnamectl set-hostname hq-srv.au-team.irpo; exec bash
 
