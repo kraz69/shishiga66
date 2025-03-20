@@ -54,9 +54,6 @@ apt-get install -y dnsmasq
 #запуск службы
 systemctl enable dnsmasq --now
 
-# Проверка статуса службы dnsmasq
-systemctl status dnsmasq
-
 
 exec bash
 
