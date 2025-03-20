@@ -10,9 +10,7 @@ apt-get install openssh-common
     echo "MaxAuthTries 2"
     echo "AllowUsers sshuser"
     echo "PermitRootLogin no"
-    echo ""
-    echo "Banner /root/banner"
-} | sudo tee /etc/ssh/sshd_config > /dev/null
+} > /etc/ssh/sshd_config > 
 
 # Создание баннера
 echo "Authorized access only" | sudo tee /root/banner > /dev/null
