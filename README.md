@@ -160,3 +160,83 @@ wget https://raw.githubusercontent.com/kraz69/shishiga66/refs/heads/main/sshdd66
 chmod +x ./sshdd66srv.sh
 
 ./sshdd66srv.sh
+## RTR OSPF 
+
+hq -rtr
+
+apt-get update
+
+apt-get install frr
+
+vim /etc/frr/daemons
+
+#Находим в нём следующую строку и приводим её к такому виду: 
+
+ospfd=yes
+
+systemctl restart frr 
+
+#А затем начнём настройку: 
+
+vtysh 
+
+conf t 
+
+router ospf 
+
+   ospf router-id 1.1.1.1
+   network 10.10.0.0/30 area 0
+
+   network 192.168.1.0/26 area 0
+
+   network 192.168.2.0/28 area 0
+
+ex
+
+
+int gre1
+
+ip ospf authentication message-digest
+
+ip ospf message-digest-key 1 md5 P@ssw0rd
+
+ex
+
+ do wr mem
+
+br - rtr
+
+apt-get update
+
+apt-get install frr
+
+vim /etc/frr/daemons
+
+#Находим в нём следующую строку и приводим её к такому виду: 
+
+ospfd=yes
+
+systemctl restart frr 
+
+vtysh
+
+   conf t
+
+        router ospf
+
+           network 10.10.0.0/30 area 0
+
+           network 192.168.3.0/27 area 0
+
+do wr mem
+
+ int gre1
+
+ ip ospf authentication message-digest
+
+ ip ospf message-digest-key 1 md5 P@ssw0rd 
+
+ex
+
+do wr mem
+
