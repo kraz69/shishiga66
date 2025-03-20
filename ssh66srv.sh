@@ -10,11 +10,11 @@ apt-get install openssh-common
     echo "MaxAuthTries 2"
     echo "AllowUsers sshuser"
     echo "PermitRootLogin no"
-} > /etc/ssh/sshd_config > 
+} > /etc/openssh/sshd_config
 
 # Создание баннера
 echo "Authorized access only" | sudo tee /root/banner > /dev/null
-echo "" | sudo tee -a /root/banner > /dev/null  # Добавление пустой строки
+echo "" | sudo tee -a /root/banner > /dev/null  
 
 # Включение и перезапуск службы SSH
 systemctl enable --now sshd
