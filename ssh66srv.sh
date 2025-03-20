@@ -15,7 +15,7 @@ apt-get install -y openssh-common
 echo "Authorized access only" | sudo tee /root/banner > /dev/null
 echo "" | sudo tee -a /root/banner > /dev/null  # Добавление пустой строки
 
-# Установка настроек службы SSH
+# Установка настроек службы SSHD
 systemctl enable --now sshd
 systemctl restart sshd
 
