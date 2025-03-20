@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 mkdir -p /etc/net/ifaces/ens19
 mkdir -p /etc/net/ifaces/gre1
